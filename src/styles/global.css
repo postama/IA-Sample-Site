@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-	--color-manila: #E3A857;
+	--color-manila: #eda655;
 	--color-ink: #111111;
 	--font-family-aeonik: 'Aeonik', sans-serif;
 }
@@ -16,7 +16,8 @@
 
 body {
     --ink-black: #111111;
-    --bg-manila: #E3A857;
+    --bg-manila: #eda655;
     --text-white: #FFFFFF;
-    --accent-manila: #E3A857;
+    --accent-manila: #eda655;
 }
+
