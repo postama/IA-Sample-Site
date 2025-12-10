@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+	--color-manila: #E3A857;
+	--color-ink: #111111;
+	--font-family-aeonik: 'Aeonik', sans-serif;
+}
+
 @font-face {
 	font-family: 'Aeonik';
 	src: url('/ar.woff2') format('woff2');
