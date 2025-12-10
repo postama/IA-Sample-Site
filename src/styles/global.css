@@ -7,3 +7,10 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+body {
+    --ink-black: #111111;
+    --bg-manila: #E3A857;
+    --text-white: #FFFFFF;
+    --accent-manila: #E3A857;
+}
