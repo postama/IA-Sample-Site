@@ -25,7 +25,11 @@
         <div class="issue-card fade-item">
           <div class="card-header">
             <span class="tech-label">REF: TRD-01</span>
-            <svg class="status-icon" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
           </div>
           <h3>Trade & Geopolitical Volatility</h3>
           <p>Constant tariff changes and overnight policy shifts render forecasts obsolete.</p>
@@ -34,7 +38,11 @@
         <div class="issue-card fade-item">
           <div class="card-header">
             <span class="tech-label">REF: OPS-02</span>
-            <svg class="status-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
           </div>
           <h3>Operational Disruptions</h3>
           <p>Delays, ETA slips, inventory shortages, and forced supplier substitutions.</p>
@@ -43,7 +51,11 @@
         <div class="issue-card fade-item">
           <div class="card-header">
             <span class="tech-label">REF: DSG-03</span>
-            <svg class="status-icon" viewBox="0 0 24 24"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+            <svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
           </div>
           <h3>Design & Part Changes</h3>
           <p>Component changes ripple through inventory and orders, breaking the chain.</p>
@@ -70,15 +82,14 @@
   <style>
     /* --- SCOPED VARIABLES --- */
     .problem-wrapper {
-      --bg-manila: #E3A857;
-      --ink-black: #111111;
-      --grid-line: 1px solid var(--ink-black);
+      --grid-line: 1px solid rgba(227, 168, 87, 0.3);
+      
       --font-main: 'Archivo', sans-serif;
       --font-tech: 'JetBrains Mono', monospace;
   
       position: relative;
-      background-color: var(--bg-manila);
-      color: var(--ink-black);
+      background-color: var(--ink-black);
+      color: var(--text-white);
       font-family: var(--font-main);
       width: 100%;
       padding: 6rem 1rem;
@@ -88,11 +99,13 @@
     .problem-wrapper * { box-sizing: border-box; }
   
     /* --- TEXTURE --- */
+    /* Updated noise to be lighter so it shows up on black */
     .noise-overlay {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none; z-index: 1; opacity: 0.12;
+      pointer-events: none; z-index: 1; opacity: 0.07;
       background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bT1vY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');
+      filter: invert(1); /* Invert noise for dark mode */
     }
   
     /* --- LAYOUT --- */
@@ -102,7 +115,7 @@
       position: relative;
       z-index: 2;
       border: var(--grid-line);
-      background: var(--bg-manila);
+      background: var(--ink-black); /* Ensures texture doesn't bleed through content too much */
     }
   
     .tech-label {
@@ -110,7 +123,8 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      opacity: 0.8;
+      color: var(--accent-manila); /* Emphasis Color */
+      opacity: 1; /* Removed opacity for higher contrast on black */
     }
   
     /* --- 1. STAT BLOCK --- */
@@ -119,18 +133,19 @@
       position: relative;
     }
   
-    /* Hazard Strip Pattern */
+    /* Hazard Strip Pattern - Updated Colors */
     .hazard-strip {
       height: 12px;
       width: 100%;
       background: repeating-linear-gradient(
         45deg,
-        var(--ink-black),
+        var(--accent-manila),
+        var(--accent-manila) 10px,
         var(--ink-black) 10px,
-        var(--bg-manila) 10px,
-        var(--bg-manila) 20px
+        var(--ink-black) 20px
       );
       border-bottom: var(--grid-line);
+      opacity: 0.8;
     }
   
     .stat-content {
@@ -141,7 +156,7 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 1.5rem;
-      border-bottom: 1px dashed rgba(17,17,17,0.3);
+      border-bottom: 1px dashed rgba(227, 168, 87, 0.3);
       padding-bottom: 0.5rem;
     }
   
@@ -152,11 +167,12 @@
       text-transform: uppercase;
       margin: 0;
       letter-spacing: -0.02em;
+      color: var(--accent-manila); /* Emphasis Color */
     }
   
     .highlight {
-      background: var(--ink-black);
-      color: var(--bg-manila);
+      background: var(--accent-manila);
+      color: var(--ink-black);
       padding: 0 0.2em;
     }
   
@@ -189,9 +205,11 @@
     .status-icon {
       width: 24px;
       height: 24px;
-      stroke: var(--ink-black);
+      stroke: var(--accent-manila);
       stroke-width: 2;
       fill: none;
+      /* FIX 1: Allow stroke to bleed slightly outside viewBox to prevent cutting off */
+      overflow: visible; 
     }
   
     .issue-card h3 {
@@ -200,12 +218,14 @@
       text-transform: uppercase;
       margin-bottom: 1rem;
       line-height: 1.1;
+      color: var(--accent-manila); /* Emphasis Color */
     }
   
     .issue-card p {
       font-size: 1rem;
       line-height: 1.5;
-      opacity: 0.9;
+      color: var(--text-white); /* Copy Color */
+      opacity: 0.8;
       margin: 0;
     }
   
@@ -214,7 +234,7 @@
       border-top: var(--grid-line);
       display: grid;
       grid-template-columns: 200px 1fr 200px;
-      background: rgba(17,17,17, 0.03); /* Subtle tint */
+      background: rgba(227, 168, 87, 0.05); /* Very subtle manila tint */
     }
   
     .footer-label, .footer-status {
@@ -236,19 +256,23 @@
       font-weight: 900;
       text-transform: uppercase;
       margin-bottom: 0.5rem;
+      color: var(--accent-manila);
     }
     
     .footer-content p {
       margin: 0;
       font-family: var(--font-tech);
       font-size: 0.9rem;
+      color: var(--text-white);
+      opacity: 0.8;
     }
   
     .blinking {
       animation: blink 1s step-end infinite;
-      background: var(--ink-black);
-      color: var(--bg-manila);
+      background: var(--accent-manila);
+      color: var(--ink-black);
       padding: 0.2rem 0.5rem;
+      font-weight: 700;
     }
   
     @keyframes blink { 50% { opacity: 0; } }
@@ -260,16 +284,13 @@
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
   
-    /* We trigger this class via JS */
     .problem-wrapper.visible .fade-item {
       opacity: 1;
       transform: translateY(0);
     }
     
-    /* Stagger delays */
     .problem-wrapper.visible .fade-item:nth-child(1) { transition-delay: 0ms; }
-    .problem-wrapper.visible .fade-item:nth-child(2) { transition-delay: 150ms; } /* The Grid container */
-    /* If we wanted to stagger grid items individually, we'd target them, but fading the whole row is cleaner */
+    .problem-wrapper.visible .fade-item:nth-child(2) { transition-delay: 150ms; }
     .problem-wrapper.visible .fade-item:nth-child(3) { transition-delay: 300ms; }
   
     /* --- RESPONSIVE --- */
@@ -308,18 +329,16 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             section.classList.add('visible');
-            // Optional: Unobserve after triggering once
             observer.unobserve(section);
           }
         });
       }, {
-        threshold: 0.2 // Trigger when 20% visible
+        threshold: 0.2
       });
   
       observer.observe(section);
     }
   
-    // Run on load and View Transitions
     initProblemObserver();
     document.addEventListener('astro:page-load', initProblemObserver);
   </script>
