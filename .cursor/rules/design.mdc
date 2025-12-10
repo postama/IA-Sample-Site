@@ -1,0 +1,14 @@
+---
+alwaysApply: true
+---
+The site uses a layout/design using a 'Utilitarian Industrial' art style. The aesthetic should define the following characteristics:
+
+Vibe: Technical, raw, schematic, Swiss-style, brutalist but functional.
+
+Color: A monochromatic background of muted 'Manila Folder' orange (#E3A857) with stark black (#111111) text and borders.
+
+Typography: Large, tight-kerned Neo-Grotesque sans-serif fonts (like Inter or Archivo). Headings should be dominant and structural.
+
+UI Elements: Strict grid lines, visible 1px solid black borders around sections, sharp 90-degree corners (no border-radius), and a focus on distinct compartments for content.
+
+Texture: Apply a subtle film grain or paper noise texture to the background to avoid a flat digital look."
