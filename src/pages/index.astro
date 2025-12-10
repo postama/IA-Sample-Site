@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import ScrollProcess from '../components/ScrollProcess.astro';
 import ProblemStatement from '../components/ProblemStatement.astro';
 import SolutionWorkflow from '../components/SolutionWorkflow.astro';
+import CTA from '../components/CTA.astro';
 ---
 
 <Layout>
@@ -14,15 +15,7 @@ import SolutionWorkflow from '../components/SolutionWorkflow.astro';
 		<ProblemStatement />
 		<SolutionWorkflow />
 
-		<!-- CTA Section -->
-		<section class="cta-section">
-			<div class="container">
-				<div class="cta-content">
-					<h2>Ready to transform your supply chain?</h2>
-					<a href="#" class="cta-button">Get Started</a>
-				</div>
-			</div>
-		</section>
+		<CTA />
 	</main>
 </Layout>
 
@@ -61,112 +54,5 @@ import SolutionWorkflow from '../components/SolutionWorkflow.astro';
 		padding: 0 24px;
 	}
 
-	/* Features Section */
-	.features-section {
-		border-bottom: 1px solid var(--accent-manila);
-		padding: 80px 0;
-	}
 
-	.grid-section {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 0;
-		border: 1px solid var(--accent-manila);
-	}
-
-	.grid-item {
-		padding: 48px 32px;
-		border-right: 1px solid var(--accent-manila);
-	}
-
-	.grid-item:last-child {
-		border-right: none;
-	}
-
-	.grid-item h2 {
-		font-size: 20px;
-		font-weight: 700;
-		letter-spacing: -0.01em;
-		margin: 0 0 16px 0;
-		font-family: 'Aeonik', sans-serif;
-		color: var(--accent-manila);
-	}
-
-	.grid-item p {
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 1.6;
-		margin: 0;
-		letter-spacing: -0.005em;
-		color: #ffffff;
-	}
-
-	/* CTA Section */
-	.cta-section {
-		padding: 80px 0;
-	}
-
-	.cta-content {
-		text-align: center;
-		border: 1px solid var(--accent-manila);
-		padding: 64px 32px;
-	}
-
-	.cta-content h2 {
-		font-size: 32px;
-		font-weight: 700;
-		letter-spacing: -0.01em;
-		margin: 0 0 32px 0;
-		font-family: 'Aeonik', sans-serif;
-		color: var(--accent-manila);
-	}
-
-	.cta-button {
-		display: inline-block;
-		padding: 16px 48px;
-		background-color: #111111;
-		color: var(--accent-manila);
-		text-decoration: none;
-		font-size: 16px;
-		font-weight: 700;
-		letter-spacing: 0.05em;
-		border: 1px solid #111111;
-		transition: background-color 0.2s, color 0.2s;
-		font-family: 'Aeonik', sans-serif;
-	}
-
-	.cta-button:hover {
-		background-color: var(--accent-manila);
-		color: #111111;
-	}
-
-	/* Responsive Design */
-	@media screen and (max-width: 768px) {
-		.grid-section {
-			grid-template-columns: 1fr;
-		}
-
-		.grid-item {
-			border-right: none;
-			border-bottom: 1px solid var(--accent-manila);
-			padding: 32px 24px;
-		}
-
-		.grid-item:last-child {
-			border-bottom: none;
-		}
-
-		.features-section,
-		.cta-section {
-			padding: 48px 0;
-		}
-
-		.cta-content {
-			padding: 48px 24px;
-		}
-
-		.cta-content h2 {
-			font-size: 24px;
-		}
-	}
 </style>
