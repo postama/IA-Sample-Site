@@ -1,0 +1,339 @@
+---
+/* IndustrialScroll.astro */
+---
+
+<section class="industrial-wrapper">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+    <div class="noise-overlay"></div>
+  
+    <div class="scroll-track" id="industrial-track">
+      <div class="sticky-frame">
+        
+        <div class="machine-interface">
+          
+          <div class="ui-header no-border-right no-border-bottom">
+            <span>SYS.MONITOR.V2</span>
+            <span>STATUS: ACTIVE</span>
+          </div>
+  
+          <div class="ui-sidebar no-border-bottom">
+            <span class="vertical-text">REF-4920</span>
+            <span class="vertical-text">INPUT STREAM</span>
+            <span class="vertical-text">// 001</span>
+          </div>
+  
+          <div class="ui-viewport">
+            <div class="message-group active" data-step="0">
+              <span class="tech-label">FIG 01. DATABASE</span>
+              <h2>ERP tracks<br>the order.</h2>
+            </div>
+            <div class="message-group" data-step="1">
+              <span class="tech-label">FIG 02. BLUEPRINT</span>
+              <h2>PLM tracks<br>the design.</h2>
+            </div>
+            <div class="message-group" data-step="2">
+              <span class="tech-label">FIG 03. LOGISTICS</span>
+              <h2>SCM tracks<br>the shipment.</h2>
+            </div>
+          </div>
+  
+          <div class="ui-schematic no-border-right">
+            <div class="icon-group active" data-step="0">
+               <svg class="svg-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M9 14h6"></path><path d="M9 18h6"></path><path d="M9 10h6"></path></svg>
+            </div>
+            <div class="icon-group" data-step="1">
+              <svg class="svg-icon" viewBox="0 0 24 24"><path d="M21.5 21.5l-6-6"></path><path d="M2 22h20"></path><path d="M8 2v4"></path><path d="M16 2v4"></path><rect x="4" y="6" width="16" height="12" rx="2"></rect><circle cx="12" cy="12" r="3"></circle></svg>
+            </div>
+            <div class="icon-group" data-step="2">
+              <svg class="svg-icon" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+          </div>
+  
+          <div class="final-state" id="final-slide">
+            <div class="final-content">
+              <span class="tech-label">FIG 04. INTEGRATION COMPLETE</span>
+              <h2>We fix the<br>chaos in between.</h2>
+              <div class="cta-container">
+                <a href="#demo" class="industrial-btn">INITIATE_DEMO ></a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="ui-footer no-border-right no-border-bottom">
+            <span class="tech-label" style="margin:0;">SYSTEM CHECK: <span class="progress-display">0%</span></span>
+            <span class="tech-label" style="margin:0;">MODE: AUTO</span>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    /* --- CORE VARIABLES --- */
+    .industrial-wrapper {
+      --bg-manila: #E3A857;
+      --ink-black: #111111;
+      --grid-line: 1px solid var(--ink-black);
+      --font-main: 'Archivo', sans-serif;
+      --font-tech: 'JetBrains Mono', monospace;
+  
+      position: relative;
+      background-color: var(--bg-manila);
+      color: var(--ink-black);
+      font-family: var(--font-main);
+      width: 100%;
+      /* Prevents margin collapse issues */
+      overflow: clip; 
+    }
+  
+    .industrial-wrapper * { box-sizing: border-box; }
+  
+    /* --- TEXTURE --- */
+    .noise-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 1; opacity: 0.12;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bT1vY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');
+    }
+  
+    /* --- TYPOGRAPHY --- */
+    .tech-label {
+      font-family: var(--font-tech);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+  
+    h2 {
+      font-size: 3.5rem;
+      line-height: 0.9;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+  
+    /* --- LAYOUT GRID --- */
+    .scroll-track { 
+      height: 400vh; 
+      position: relative; 
+      z-index: 2; 
+    }
+    
+    .sticky-frame {
+      position: sticky; 
+      top: 0; 
+      height: 100vh; 
+      width: 100%;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      border-bottom: var(--grid-line);
+    }
+  
+    .machine-interface {
+      width: 90%; max-width: 1200px; height: 80vh;
+      display: grid;
+      /* Sidebar | Content | Schematic */
+      grid-template-columns: 80px 1fr 1fr;
+      /* Header | Content | Footer */
+      grid-template-rows: 60px 1fr 100px;
+      border: var(--grid-line);
+      background: var(--bg-manila);
+      position: relative;
+    }
+  
+    .machine-interface > div {
+      border-right: var(--grid-line);
+      border-bottom: var(--grid-line);
+      padding: 1.5rem;
+      position: relative;
+    }
+    .machine-interface > div:last-child { border: none; }
+    .no-border-right { border-right: none !important; }
+    .no-border-bottom { border-bottom: none !important; }
+  
+    /* --- SECTIONS --- */
+    .ui-header {
+      grid-column: 1 / -1; grid-row: 1 / 2;
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--ink-black); color: var(--bg-manila);
+      padding: 0 1rem !important;
+    }
+    .ui-header span { font-family: var(--font-tech); font-size: 0.8rem; }
+  
+    .ui-sidebar {
+      grid-column: 1 / 2; grid-row: 2 / 3;
+      display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+      padding: 1rem 0 !important;
+    }
+    .vertical-text {
+      writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg);
+      font-family: var(--font-tech); font-size: 0.7rem; letter-spacing: 2px;
+    }
+  
+    .ui-viewport {
+      grid-column: 2 / 3; grid-row: 2 / 3;
+      display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+      overflow: hidden;
+    }
+  
+    .ui-schematic {
+      grid-column: 3 / 4; grid-row: 2 / 3;
+      display: flex; justify-content: center; align-items: center;
+      background-image: 
+          linear-gradient(var(--ink-black) 1px, transparent 1px),
+          linear-gradient(90deg, var(--ink-black) 1px, transparent 1px);
+      background-size: 40px 40px; background-position: center;
+    }
+    .ui-schematic::before {
+      content: ''; position: absolute; inset: 0; background: var(--bg-manila); opacity: 0.9;
+    }
+  
+    .ui-footer {
+      grid-column: 2 / -1; grid-row: 3 / 4;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+  
+    /* --- ANIMATION CONTENT --- */
+    .message-group {
+      position: absolute; opacity: 0; transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .message-group.active { opacity: 1; transform: translateY(0); }
+  
+    .icon-group {
+      position: relative; z-index: 10; width: 180px; height: 180px; display: none;
+    }
+    .icon-group.active { display: block; animation: flickerIn 0.3s forwards; }
+  
+    .svg-icon {
+      width: 100%; height: 100%; stroke: var(--ink-black); stroke-width: 1.5; fill: none;
+    }
+  
+    /* --- FINAL SLIDE --- */
+    .final-state {
+      grid-column: 2 / -1;
+      grid-row: 2 / 3;
+      z-index: 20; 
+      background: var(--ink-black);
+      color: var(--bg-manila);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3rem;
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      transition: clip-path 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+  
+    .final-state.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  
+    .final-state h2 { color: var(--bg-manila); margin-bottom: 2rem; }
+    .final-state .tech-label { color: var(--bg-manila); opacity: 0.6; }
+  
+    .industrial-btn {
+      display: inline-block;
+      border: 1px solid var(--bg-manila);
+      color: var(--bg-manila);
+      padding: 0.8rem 1.5rem;
+      font-family: var(--font-tech);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      transition: all 0.2s ease;
+    }
+    .industrial-btn:hover {
+      background: var(--bg-manila);
+      color: var(--ink-black);
+    }
+  
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      .machine-interface {
+        grid-template-columns: 40px 1fr;
+        grid-template-rows: 50px 1fr 1fr 60px;
+      }
+      .ui-header { grid-column: 1 / -1; grid-row: 1 / 2; }
+      .ui-sidebar { grid-column: 1 / 2; grid-row: 2 / 5; }
+      .ui-viewport { 
+        grid-column: 2 / 3; grid-row: 2 / 3; 
+        border-bottom: var(--grid-line) !important; 
+        padding: 1rem;
+      }
+      .ui-schematic { grid-column: 2 / 3; grid-row: 3 / 4; }
+      .ui-footer { grid-column: 2 / 3; grid-row: 4 / 5; }
+      
+      .final-state {
+        grid-column: 2 / 3;
+        grid-row: 2 / 4; 
+        padding: 1.5rem;
+      }
+      h2 { font-size: 2rem; }
+    }
+  
+    @keyframes flickerIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      50% { opacity: 1; }
+      60% { opacity: 0; }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+  
+  <script>
+    function initIndustrialScroll() {
+      const track = document.getElementById('industrial-track');
+      if (!track) return;
+  
+      const progressDisplay = track.querySelector('.progress-display') as HTMLElement;
+      const finalSlide = track.querySelector('#final-slide');
+      const messages = Array.from(track.querySelectorAll('.message-group'));
+      const icons = Array.from(track.querySelectorAll('.icon-group'));
+  
+      function updateScroll() {
+        const rect = track.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        
+        const distanceScrolled = -rect.top;
+        const maxScroll = rect.height - viewportHeight;
+        let progress = distanceScrolled / maxScroll;
+        progress = Math.max(0, Math.min(progress, 1));
+        
+        if(progressDisplay) progressDisplay.innerText = Math.floor(progress * 100) + '%';
+  
+        // Reset
+        messages.forEach(el => el.classList.remove('active'));
+        icons.forEach(el => el.classList.remove('active'));
+        if(finalSlide) finalSlide.classList.remove('active');
+  
+        // Logic
+        if (progress < 0.25) {
+          if(messages[0]) messages[0].classList.add('active');
+          if(icons[0]) icons[0].classList.add('active');
+        } else if (progress < 0.50) {
+          if(messages[1]) messages[1].classList.add('active');
+          if(icons[1]) icons[1].classList.add('active');
+        } else if (progress < 0.75) {
+          if(messages[2]) messages[2].classList.add('active');
+          if(icons[2]) icons[2].classList.add('active');
+        } else {
+          if(finalSlide) finalSlide.classList.add('active');
+        }
+      }
+  
+      window.addEventListener('scroll', updateScroll);
+      updateScroll();
+    }
+  
+    initIndustrialScroll();
+    document.addEventListener('astro:page-load', initIndustrialScroll);
+  </script>
