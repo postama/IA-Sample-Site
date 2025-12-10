@@ -1,0 +1,168 @@
+---
+/* SolutionWorkflow.astro */
+---
+
+<section 
+  id="solution-trigger" 
+  class="group relative w-full py-24 px-4 bg-[var(--ink-black)] text-white font-sans overflow-hidden"
+>
+    <div 
+      class="absolute inset-0 z-10 opacity-[0.07] pointer-events-none invert mix-blend-overlay"
+      style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bT1vY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');"
+    ></div>
+
+    <div class="max-w-7xl mx-auto relative z-20">
+      
+      <div class="mb-12 border-l-4 border-[var(--accent-manila)] pl-6 opacity-0 translate-x-[-20px] transition-all duration-700 ease-out group-[.visible]:opacity-100 group-[.visible]:translate-x-0">
+        <div class="flex items-center gap-3 mb-2">
+            <span class="w-2 h-2 bg-[var(--accent-manila)] animate-pulse"></span>
+            <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent-manila)]">SYS_STATUS: OPTIMIZED_WORKFLOW</span>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-black uppercase leading-none tracking-tight text-white">
+          Autonomous execution.<br />
+          <span class="text-[var(--accent-manila)]">Human command.</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-8 border-t border-[var(--accent-manila)] pt-8">
+        
+        <div class="relative space-y-0">
+          
+          <div class="absolute left-[19px] top-4 bottom-4 w-px border-l border-dashed border-[var(--accent-manila)] opacity-30 z-0"></div>
+
+          <div class="relative z-10 grid grid-cols-[40px_1fr] gap-6 pb-12 opacity-0 translate-y-4 transition-all duration-500 ease-out group-[.visible]:opacity-100 group-[.visible]:translate-y-0 delay-100">
+            <div class="w-10 h-10 border border-[var(--accent-manila)] bg-[var(--ink-black)] flex items-center justify-center">
+              <span class="font-mono text-xs font-bold text-[var(--accent-manila)]">01</span>
+            </div>
+            <div>
+              <div class="flex items-baseline gap-3 mb-1">
+                <h3 class="text-xl font-bold uppercase text-[var(--accent-manila)]">Trigger Event</h3>
+                <span class="font-mono text-[10px] text-white/50 border border-white/20 px-1">INCOMING_SIGNAL</span>
+              </div>
+              <p class="text-white/80 leading-relaxed max-w-xl">
+                New tariff memo lands. Agent instantly ingests the document, maps affected Purchase Orders (POs), and queries current supplier database.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative z-10 grid grid-cols-[40px_1fr] gap-6 pb-12 opacity-0 translate-y-4 transition-all duration-500 ease-out group-[.visible]:opacity-100 group-[.visible]:translate-y-0 delay-200">
+            <div class="w-10 h-10 border border-[var(--accent-manila)] bg-[var(--ink-black)] flex items-center justify-center">
+              <span class="font-mono text-xs font-bold text-[var(--accent-manila)]">02</span>
+            </div>
+            <div>
+              <div class="flex items-baseline gap-3 mb-1">
+                <h3 class="text-xl font-bold uppercase text-[var(--accent-manila)]">Impact Modeling</h3>
+                <span class="font-mono text-[10px] text-[var(--accent-manila)] border border-[var(--accent-manila)] px-1">AI_AGENT</span>
+              </div>
+              <p class="text-white/80 leading-relaxed max-w-xl">
+                Analysis Agent models cost impact per PO and identifies alternative sourcing routes, surfacing options with clear tradeoff analysis.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative z-10 grid grid-cols-[40px_1fr] gap-6 pb-12 opacity-0 translate-y-4 transition-all duration-500 ease-out group-[.visible]:opacity-100 group-[.visible]:translate-y-0 delay-300">
+            <div class="w-10 h-10 bg-[var(--accent-manila)] text-[var(--ink-black)] flex items-center justify-center">
+              <svg class="w-5 h-5 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="square">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="p-6 border border-[var(--accent-manila)] bg-[var(--accent-manila)]/[0.05]">
+              <div class="flex items-baseline gap-3 mb-2">
+                <h3 class="text-xl font-bold uppercase text-white">Human Review</h3>
+                <span class="font-mono text-[10px] bg-[var(--accent-manila)] text-[var(--ink-black)] px-1 font-bold">REQUIRED</span>
+              </div>
+              <p class="text-white/90 leading-relaxed">
+                User reviews the pre-calculated options and selects the optimal resolution strategy.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative z-10 grid grid-cols-[40px_1fr] gap-6 opacity-0 translate-y-4 transition-all duration-500 ease-out group-[.visible]:opacity-100 group-[.visible]:translate-y-0 delay-400">
+            <div class="w-10 h-10 border border-[var(--accent-manila)] bg-[var(--ink-black)] flex items-center justify-center">
+              <span class="font-mono text-xs font-bold text-[var(--accent-manila)]">04</span>
+            </div>
+            <div>
+              <div class="flex items-baseline gap-3 mb-1">
+                <h3 class="text-xl font-bold uppercase text-[var(--accent-manila)]">Execution</h3>
+                <span class="font-mono text-[10px] text-[var(--accent-manila)] border border-[var(--accent-manila)] px-1">AUTO_COMMIT</span>
+              </div>
+              <p class="text-white/80 leading-relaxed max-w-xl">
+                Agent updates POs, notifies suppliers, documents decisions in ERP, and verifies final outcome.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col opacity-0 translate-x-4 transition-all duration-700 ease-out group-[.visible]:opacity-100 group-[.visible]:translate-x-0 delay-500">
+            
+          <div class="h-full border border-[var(--accent-manila)] bg-[var(--ink-black)] flex flex-col">
+            <div class="p-4 border-b border-[var(--accent-manila)] bg-[var(--accent-manila)]/[0.1]">
+              <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent-manila)]">PERFORMANCE_DELTA</span>
+            </div>
+
+            <div class="flex-1 p-8 flex flex-col justify-center items-start">
+              
+              <div class="mb-8 w-full">
+                <div class="flex justify-between text-xs font-mono text-white/40 mb-1 uppercase">
+                  <span>Standard Protocol</span>
+                  <span>Avg: 3-5 Days</span>
+                </div>
+                <div class="w-full h-1 bg-white/10 relative overflow-hidden">
+                   </div>
+              </div>
+
+              <div class="mb-2 w-full">
+                <div class="flex justify-between text-xs font-mono text-[var(--accent-manila)] mb-1 uppercase">
+                  <span>Our Protocol</span>
+                  <span>Target: &lt; 20 Mins</span>
+                </div>
+                <div class="w-full h-2 bg-[var(--accent-manila)] hazard-strip"></div>
+              </div>
+
+              <div class="mt-8 border-l-2 border-[var(--accent-manila)] pl-4">
+                 <p class="text-sm text-white/60 mb-2 font-mono">RESULT:</p>
+                 <p class="text-lg leading-tight text-white">
+                    Processes across email, spreadsheets, and ERPs condensed into <strong class="text-[var(--accent-manila)]">20 minutes of supervised review.</strong>
+                 </p>
+              </div>
+
+            </div>
+            
+            <div class="p-2 border-t border-[var(--accent-manila)] flex justify-between items-center">
+               <svg class="w-4 h-4 text-[var(--accent-manila)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20"/><path d="M12 2v20"/><path d="M2 12h20"/></svg>
+               <span class="font-mono text-[10px] text-[var(--accent-manila)]">END_OF_LINE</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+  
+    </div>
+</section>
+
+<script>
+  function initSolutionObserver() {
+    const section = document.getElementById('solution-trigger');
+    
+    if (!section) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          section.classList.add('visible');
+          observer.unobserve(section);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    observer.observe(section);
+  }
+
+  initSolutionObserver();
+  document.addEventListener('astro:page-load', initSolutionObserver);
+</script>

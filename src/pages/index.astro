@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ScrollProcess from '../components/ScrollProcess.astro';
 import ProblemStatement from '../components/ProblemStatement.astro';
+import SolutionWorkflow from '../components/SolutionWorkflow.astro';
 ---
 
 <Layout>
@@ -11,26 +12,7 @@ import ProblemStatement from '../components/ProblemStatement.astro';
 
 		<ScrollProcess />
 		<ProblemStatement />
-
-		<!-- Features Grid -->
-		<section class="features-section">
-			<div class="container">
-				<div class="grid-section">
-					<div class="grid-item">
-						<h2>AI-Powered</h2>
-						<p>Leverage artificial intelligence to optimize your supply chain operations with precision and speed.</p>
-					</div>
-					<div class="grid-item">
-						<h2>Cross-Industry</h2>
-						<p>Deployed across industries, from manufacturing to logistics, delivering consistent results.</p>
-					</div>
-					<div class="grid-item">
-						<h2>Action-Oriented</h2>
-						<p>Move beyond analytics. Execute decisions that drive real impact in your operations.</p>
-					</div>
-				</div>
-			</div>
-		</section>
+		<SolutionWorkflow />
 
 		<!-- CTA Section -->
 		<section class="cta-section">
