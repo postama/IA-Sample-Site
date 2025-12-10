@@ -2,4 +2,5 @@
 alwaysApply: true
 ---
 This project is built with Astro
+Organize the code with Astro best practices, making new components and layouts when relevant
 This project is styled with tailwindcss
