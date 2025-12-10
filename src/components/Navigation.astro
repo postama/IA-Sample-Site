@@ -12,24 +12,19 @@ const isActive = (path: string) =>
 
 <header 
   id="industrial-nav" 
-  class="fixed top-0 left-0 w-full z-50 bg-[var(--ink-black)] border-b border-[var(--accent-manila)] h-16 md:h-20 transition-[height] duration-300 ease-[cubic-bezier(0.25,1,0.5,1)]"
+  class="fixed top-0 left-0 w-full z-50 bg-ink border-b border-manila h-16 md:h-20 transition-[height] duration-300 ease-[cubic-bezier(0.25,1,0.5,1)]"
 >
-  <div class="absolute inset-0 opacity-10 pointer-events-none noise-bg mix-blend-overlay"></div>
-
-  <div class="absolute top-0 left-0 w-full h-[1px] bg-[var(--accent-manila)] opacity-50"></div>
-
-  <div class="max-w-7xl mx-auto flex items-stretch h-full border-x border-[var(--accent-manila)]/20 relative z-20 bg-[var(--ink-black)]">
-    
+  <div class="max-w-7xl mx-auto flex items-stretch h-full relative z-20 bg-ink">
     <a 
       href="/" 
-      class="flex-grow md:flex-grow-0 group relative flex items-center px-6 md:px-8 border-r border-[var(--accent-manila)] hover:bg-[var(--accent-manila)]/10 transition-colors h-full"
+      class="flex-grow md:flex-grow-0 group relative flex items-center px-6 md:px-8 border-r border-manila hover:bg-manila/10 transition-colors h-full"
     >
-      <span class="font-sans font-black text-lg md:text-2xl tracking-tighter text-[var(--accent-manila)] uppercase group-hover:text-white transition-colors whitespace-nowrap">
+      <span class="font-sans font-black text-lg md:text-2xl tracking-tighter text-manila uppercase group-hover:text-white transition-colors whitespace-nowrap">
         INDUSTRIAL ARTS
       </span>
     </a>
 
-    <div class="hidden md:block flex-grow bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2nk5+d/D8R79uz5/xqI/wMxFhYW/8fExPwHAIkvBPkTLOmOAAAAAElFTkSuQmCC')] opacity-20 border-r border-[var(--accent-manila)]/20"></div>
+    <div class="hidden md:block flex-grow bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2nk5+d/D8R79uz5/xqI/wMxFhYW/8fExPwHAIkvBPkTLOmOAAAAAElFTkSuQmCC')] opacity-20 border-r border-manila/20"></div>
 
     <nav class="hidden md:flex h-full">
       {links.map((link) => {
@@ -38,16 +33,16 @@ const isActive = (path: string) =>
           <a
             href={link.path}
             class:list={[
-              "relative flex items-center px-10 border-l border-[var(--accent-manila)] font-mono text-sm tracking-widest transition-all duration-200 h-full",
+              "relative flex items-center px-10 border-l border-manila font-mono text-sm tracking-widest transition-all duration-200 h-full",
               active 
-                ? "text-white bg-[var(--accent-manila)]/10" 
-                : "text-[var(--accent-manila)] hover:bg-[var(--accent-manila)]/5 hover:text-white"
+                ? "text-white bg-manila/10" 
+                : "text-manila hover:bg-manila/5 hover:text-white"
             ]}
           >
             {active && (
               <>
-                <span class="absolute top-0 right-0 w-2 h-2 border-l border-b border-[var(--accent-manila)]"></span>
-                <span class="absolute bottom-0 left-0 w-2 h-2 border-r border-t border-[var(--accent-manila)]"></span>
+                <span class="absolute top-0 right-0 w-2 h-2 border-l border-b border-manila"></span>
+                <span class="absolute bottom-0 left-0 w-2 h-2 border-r border-t border-manila"></span>
               </>
             )}
             <span class="relative z-10">{link.name}</span>
@@ -58,7 +53,7 @@ const isActive = (path: string) =>
 
     <button 
       id="mobile-toggle"
-      class="md:hidden flex items-center justify-center px-6 border-l border-[var(--accent-manila)] text-[var(--accent-manila)] hover:bg-[var(--accent-manila)]/10 transition-colors active:bg-[var(--accent-manila)]/20"
+      class="md:hidden flex items-center justify-center px-6 border-l border-manila text-manila hover:bg-manila/10 transition-colors active:bg-manila/20"
       aria-label="Toggle Menu"
     >
       <div class="space-y-1.5 pointer-events-none">
@@ -71,7 +66,7 @@ const isActive = (path: string) =>
 
   <div 
     id="mobile-menu" 
-    class="absolute top-full left-0 w-full bg-[var(--ink-black)] border-b border-[var(--accent-manila)] overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 z-10"
+    class="absolute top-full left-0 w-full bg-ink border-b border-manila overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 z-10"
   >
     <div class="absolute inset-0 opacity-10 pointer-events-none noise-bg mix-blend-overlay"></div>
     
@@ -82,8 +77,8 @@ const isActive = (path: string) =>
           <a
             href={link.path}
             class:list={[
-              "flex items-center px-6 py-4 border-b border-[var(--accent-manila)]/30 font-mono text-sm tracking-widest",
-              active ? "text-white bg-[var(--accent-manila)]/10" : "text-[var(--accent-manila)]"
+              "flex items-center px-6 py-4 border-b border-manila/30 font-mono text-sm tracking-widest",
+              active ? "text-white bg-manila/10" : "text-manila"
             ]}
           >
              <span class="mr-3 opacity-50">&gt;</span>

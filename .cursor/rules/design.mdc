@@ -18,7 +18,7 @@ Typography:
 
 UI Elements: 
 * Strict grid lines and compartments.
-* Visible 1px solid borders using the Manila accent color (often defined via Tailwind as `border-[var(--accent-manila)]`).
+* Visible 1px solid borders using the Manila accent color (often defined via Tailwind as `border-manila`).
 * Sharp 90-degree corners (no border-radius).
 * Icons should be vector strokes (outline style), not filled shapes, using the Manila accent color.
 
@@ -27,5 +27,5 @@ Texture:
 
 Implementation Standards:
 * Framework: Tailwind CSS.
-* Variable Usage: Do not hardcode hex values. Use Tailwind's arbitrary value syntax to reference global CSS variables (e.g., `bg-[var(--ink-black)]`, `text-[var(--accent-manila)]`, `border-[var(--accent-manila)]`).
+* Variable Usage: Do not hardcode hex values. Use custom defined tailwind variables to reference global themes (e.g., `bg-ink`, `text-manila`, `border-manila`).
 * Layout: Use Tailwind grid/flex utilities to create the schematic layouts.
