@@ -1,14 +1,31 @@
 ---
 alwaysApply: true
 ---
-The site uses a layout/design using a 'Utilitarian Industrial' art style. The aesthetic should define the following characteristics:
+Design using a 'Dark Industrial' art style. The aesthetic should define the following characteristics:
 
-Vibe: Technical, raw, schematic, Swiss-style, brutalist but functional.
+Vibe: High-contrast technical, raw, schematic, and brutalist. It should feel like a backlit monitor or a dark-mode industrial control panel.
 
-Color: A monochromatic background of muted 'Manila Folder' orange (#E3A857) with stark black (#111111) text and borders.
+Color System:
+* Base: Deep 'Ink Black' (#111111) used for the primary background (assigned to variable --ink-black).
+* Accent/Structure: 'Manila' (#E3A857) used for borders, headlines, technical labels, and iconography (assigned to variable --accent-manila).
+* Copy: Pure White or Off-White used for body paragraphs for maximum readability on the dark background.
+* Note: 'Manila' is no longer the background; it is the light source and structure.
 
-Typography: Large, tight-kerned Neo-Grotesque sans-serif fonts (like Aeonik). Headings should be dominant and structural.
+Typography: 
+* Headlines: Large, tight-kerned Neo-Grotesque sans-serif fonts (like Archivo). 
+* Data/Labels: Monospace fonts (like JetBrains Mono) for technical readouts.
+* Text Treatment: Headlines are typically Manila; Body copy is White.
 
-UI Elements: Strict grid lines, visible 1px solid black borders around sections, sharp 90-degree corners (no border-radius), and a focus on distinct compartments for content.
+UI Elements: 
+* Strict grid lines and compartments.
+* Visible 1px solid borders using the Manila accent color (often defined via Tailwind as `border-[var(--accent-manila)]`).
+* Sharp 90-degree corners (no border-radius).
+* Icons should be vector strokes (outline style), not filled shapes, using the Manila accent color.
 
-Texture: Apply a subtle film grain or paper noise texture to the background to avoid a flat digital look."
+Texture: 
+* Apply a subtle, inverted film grain or static noise overlay to the black background to prevent a "flat" digital look.
+
+Implementation Standards:
+* Framework: Tailwind CSS.
+* Variable Usage: Do not hardcode hex values. Use Tailwind's arbitrary value syntax to reference global CSS variables (e.g., `bg-[var(--ink-black)]`, `text-[var(--accent-manila)]`, `border-[var(--accent-manila)]`).
+* Layout: Use Tailwind grid/flex utilities to create the schematic layouts.
