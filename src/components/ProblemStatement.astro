@@ -2,343 +2,132 @@
 /* ProblemStatement.astro */
 ---
 
-<section class="problem-wrapper" id="problem-trigger">
-    <div class="noise-overlay"></div>
-  
-    <div class="content-container">
+<section 
+  id="problem-trigger" 
+  class="group relative w-full py-24 px-4 bg-[var(--ink-black)] text-white font-sans overflow-hidden"
+>
+    <div 
+      class="absolute inset-0 z-10 opacity-[0.07] pointer-events-none invert mix-blend-overlay"
+      style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bT1vY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');"
+    ></div>
+
+    <div class="max-w-7xl mx-auto relative z-20 border border-[var(--accent-manila)] bg-[var(--ink-black)]">
       
-      <div class="stat-block fade-item">
-        <div class="hazard-strip"></div>
-        <div class="stat-content">
-          <div class="meta-row">
-              <span class="tech-label">ERR_LOG: REVENUE_LEAKAGE</span>
-              <span class="tech-label">PRIORITY: CRITICAL</span>
+      <div class="relative border-b border-[var(--accent-manila)] opacity-0 translate-y-8 transition-all duration-700 ease-out group-[.visible]:opacity-100 group-[.visible]:translate-y-0 delay-0">
+        
+        <div class="h-3 w-full border-b border-[var(--accent-manila)] opacity-80 hazard-strip"></div>
+        
+        <div class="p-8 md:p-12">
+          <div class="flex justify-between mb-6 border-b border-dashed border-[var(--accent-manila)] pb-2 opacity-80">
+              <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent-manila)]">ERR_LOG: REVENUE_LEAKAGE</span>
+              <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent-manila)]">PRIORITY: CRITICAL</span>
           </div>
-          <h2 class="stat-headline">
-            Supply chain exceptions cost brands <span class="highlight">13-28%</span> of annual revenue.
+          <h2 class="text-3xl md:text-5xl font-black uppercase leading-none tracking-tight text-[var(--accent-manila)]">
+            Supply chain exceptions cost brands <span class="bg-[var(--accent-manila)] text-[var(--ink-black)] px-1">13-28%</span> of annual revenue.
           </h2>
         </div>
       </div>
   
-      <div class="issues-grid">
+      <div class="grid grid-cols-1 md:grid-cols-3 opacity-0 translate-y-8 transition-all duration-700 ease-out group-[.visible]:opacity-100 group-[.visible]:translate-y-0 delay-150">
         
-        <div class="issue-card fade-item">
-          <div class="card-header">
-            <span class="tech-label">REF: TRD-01</span>
-            <svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="flex flex-col justify-between p-8 min-h-[300px] border-b md:border-b-0 md:border-r border-[var(--accent-manila)] last:border-0">
+          <div class="flex justify-between items-start mb-8">
+            <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent-manila)]">REF: TRD-01</span>
+            <svg class="w-6 h-6 stroke-[var(--accent-manila)] stroke-2 fill-none overflow-visible" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
               <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
               <line x1="12" y1="9" x2="12" y2="13"></line>
               <line x1="12" y1="17" x2="12.01" y2="17"></line>
             </svg>
           </div>
-          <h3>Trade & Geopolitical Volatility</h3>
-          <p>Constant tariff changes and overnight policy shifts render forecasts obsolete.</p>
+          <h3 class="text-2xl font-bold uppercase mb-4 leading-tight text-[var(--accent-manila)]">Trade & Geopolitical Volatility</h3>
+          <p class="text-base leading-relaxed text-white/80">Constant tariff changes and overnight policy shifts render forecasts obsolete.</p>
         </div>
   
-        <div class="issue-card fade-item">
-          <div class="card-header">
-            <span class="tech-label">REF: OPS-02</span>
-            <svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="flex flex-col justify-between p-8 min-h-[300px] border-b md:border-b-0 md:border-r border-[var(--accent-manila)] last:border-0">
+          <div class="flex justify-between items-start mb-8">
+            <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent-manila)]">REF: OPS-02</span>
+            <svg class="w-6 h-6 stroke-[var(--accent-manila)] stroke-2 fill-none overflow-visible" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
               <line x1="12" y1="8" x2="12" y2="12"></line>
               <line x1="12" y1="16" x2="12.01" y2="16"></line>
             </svg>
           </div>
-          <h3>Operational Disruptions</h3>
-          <p>Delays, ETA slips, inventory shortages, and forced supplier substitutions.</p>
+          <h3 class="text-2xl font-bold uppercase mb-4 leading-tight text-[var(--accent-manila)]">Operational Disruptions</h3>
+          <p class="text-base leading-relaxed text-white/80">Delays, ETA slips, inventory shortages, and forced supplier substitutions.</p>
         </div>
   
-        <div class="issue-card fade-item">
-          <div class="card-header">
-            <span class="tech-label">REF: DSG-03</span>
-            <svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="flex flex-col justify-between p-8 min-h-[300px] border-b md:border-b-0 md:border-r border-[var(--accent-manila)] last:border-0">
+          <div class="flex justify-between items-start mb-8">
+            <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent-manila)]">REF: DSG-03</span>
+            <svg class="w-6 h-6 stroke-[var(--accent-manila)] stroke-2 fill-none overflow-visible" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
               <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
               <line x1="12" y1="22.08" x2="12" y2="12"></line>
             </svg>
           </div>
-          <h3>Design & Part Changes</h3>
-          <p>Component changes ripple through inventory and orders, breaking the chain.</p>
+          <h3 class="text-2xl font-bold uppercase mb-4 leading-tight text-[var(--accent-manila)]">Design & Part Changes</h3>
+          <p class="text-base leading-relaxed text-white/80">Component changes ripple through inventory and orders, breaking the chain.</p>
         </div>
   
       </div>
   
-      <div class="chaos-footer fade-item">
-        <div class="footer-label">
-          <span class="tech-label">SYSTEM DIAGNOSIS:</span>
+      <div class="grid grid-cols-1 md:grid-cols-[200px_1fr_200px] border-t border-[var(--accent-manila)] bg-[var(--bg-manila)]/[0.05] opacity-0 translate-y-8 transition-all duration-700 ease-out group-[.visible]:opacity-100 group-[.visible]:translate-y-0 delay-300">
+        
+        <div class="p-8 flex items-center justify-start md:justify-center border-b md:border-b-0 md:border-r border-[var(--accent-manila)]">
+          <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent-manila)]">SYSTEM DIAGNOSIS:</span>
         </div>
-        <div class="footer-content">
-          <h3>CONSTANT CHAOS</h3>
-          <p>Changes are logged, but not prioritized. Teams scramble offline to assess impact.</p>
+        
+        <div class="p-8">
+          <h3 class="text-xl font-black uppercase mb-2 text-[var(--accent-manila)]">CONSTANT CHAOS</h3>
+          <p class="font-mono text-sm text-white/80">Changes are logged, but not prioritized. Teams scramble offline to assess impact.</p>
         </div>
-        <div class="footer-status">
-          <span class="tech-label blinking">ATTN REQUIRED</span>
+        
+        <div class="p-8 flex items-center justify-start md:justify-center border-t md:border-t-0 md:border-l border-[var(--accent-manila)]">
+          <span class="font-mono text-xs uppercase tracking-widest bg-[var(--accent-manila)] text-[var(--ink-black)] px-2 py-1 font-bold animate-pulse">ATTN REQUIRED</span>
         </div>
       </div>
   
     </div>
-  </section>
+</section>
   
-  <style>
-    /* --- SCOPED VARIABLES --- */
-    .problem-wrapper {
-      --grid-line: 1px solid rgba(227, 168, 87, 0.3);
-      
-      --font-main: 'Archivo', sans-serif;
-      --font-tech: 'JetBrains Mono', monospace;
+<style>
+  /* Repeating linear gradients with hard stops are difficult to do cleanly 
+    with standard Tailwind classes, so standard CSS is preferred here.
+    We reference the same CSS global variables.
+  */
+  .hazard-strip {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--accent-manila),
+      var(--accent-manila) 10px,
+      var(--ink-black) 10px,
+      var(--ink-black) 20px
+    );
+  }
+</style>
   
-      position: relative;
-      background-color: var(--ink-black);
-      color: var(--text-white);
-      font-family: var(--font-main);
-      width: 100%;
-      padding: 6rem 1rem;
-      overflow: hidden;
-    }
-  
-    .problem-wrapper * { box-sizing: border-box; }
-  
-    /* --- TEXTURE --- */
-    /* Updated noise to be lighter so it shows up on black */
-    .noise-overlay {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none; z-index: 1; opacity: 0.07;
-      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bT1vY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');
-      filter: invert(1); /* Invert noise for dark mode */
-    }
-  
-    /* --- LAYOUT --- */
-    .content-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-      border: var(--grid-line);
-      background: var(--ink-black); /* Ensures texture doesn't bleed through content too much */
-    }
-  
-    .tech-label {
-      font-family: var(--font-tech);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--accent-manila); /* Emphasis Color */
-      opacity: 1; /* Removed opacity for higher contrast on black */
-    }
-  
-    /* --- 1. STAT BLOCK --- */
-    .stat-block {
-      border-bottom: var(--grid-line);
-      position: relative;
-    }
-  
-    /* Hazard Strip Pattern - Updated Colors */
-    .hazard-strip {
-      height: 12px;
-      width: 100%;
-      background: repeating-linear-gradient(
-        45deg,
-        var(--accent-manila),
-        var(--accent-manila) 10px,
-        var(--ink-black) 10px,
-        var(--ink-black) 20px
-      );
-      border-bottom: var(--grid-line);
-      opacity: 0.8;
-    }
-  
-    .stat-content {
-      padding: 3rem 2rem;
-    }
-  
-    .meta-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px dashed rgba(227, 168, 87, 0.3);
-      padding-bottom: 0.5rem;
-    }
-  
-    .stat-headline {
-      font-size: 3rem;
-      line-height: 1;
-      font-weight: 900;
-      text-transform: uppercase;
-      margin: 0;
-      letter-spacing: -0.02em;
-      color: var(--accent-manila); /* Emphasis Color */
-    }
-  
-    .highlight {
-      background: var(--accent-manila);
-      color: var(--ink-black);
-      padding: 0 0.2em;
-    }
-  
-    /* --- 2. ISSUES GRID --- */
-    .issues-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-  
-    .issue-card {
-      border-right: var(--grid-line);
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 300px;
-    }
+<script>
+  function initProblemObserver() {
+    const section = document.getElementById('problem-trigger');
     
-    .issue-card:last-child {
-      border-right: none;
-    }
-  
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 2rem;
-    }
-  
-    .status-icon {
-      width: 24px;
-      height: 24px;
-      stroke: var(--accent-manila);
-      stroke-width: 2;
-      fill: none;
-      /* FIX 1: Allow stroke to bleed slightly outside viewBox to prevent cutting off */
-      overflow: visible; 
-    }
-  
-    .issue-card h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-      color: var(--accent-manila); /* Emphasis Color */
-    }
-  
-    .issue-card p {
-      font-size: 1rem;
-      line-height: 1.5;
-      color: var(--text-white); /* Copy Color */
-      opacity: 0.8;
-      margin: 0;
-    }
-  
-    /* --- 3. FOOTER / CHAOS --- */
-    .chaos-footer {
-      border-top: var(--grid-line);
-      display: grid;
-      grid-template-columns: 200px 1fr 200px;
-      background: rgba(227, 168, 87, 0.05); /* Very subtle manila tint */
-    }
-  
-    .footer-label, .footer-status {
-      padding: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .footer-label { border-right: var(--grid-line); }
-    .footer-status { border-left: var(--grid-line); }
-  
-    .footer-content {
-      padding: 2rem;
-    }
-  
-    .footer-content h3 {
-      font-size: 1.25rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-      color: var(--accent-manila);
-    }
-    
-    .footer-content p {
-      margin: 0;
-      font-family: var(--font-tech);
-      font-size: 0.9rem;
-      color: var(--text-white);
-      opacity: 0.8;
-    }
-  
-    .blinking {
-      animation: blink 1s step-end infinite;
-      background: var(--accent-manila);
-      color: var(--ink-black);
-      padding: 0.2rem 0.5rem;
-      font-weight: 700;
-    }
-  
-    @keyframes blink { 50% { opacity: 0; } }
-  
-    /* --- ANIMATION STATES --- */
-    .fade-item {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-  
-    .problem-wrapper.visible .fade-item {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .problem-wrapper.visible .fade-item:nth-child(1) { transition-delay: 0ms; }
-    .problem-wrapper.visible .fade-item:nth-child(2) { transition-delay: 150ms; }
-    .problem-wrapper.visible .fade-item:nth-child(3) { transition-delay: 300ms; }
-  
-    /* --- RESPONSIVE --- */
-    @media (max-width: 900px) {
-      .issues-grid {
-        grid-template-columns: 1fr;
-      }
-      .issue-card {
-        border-right: none;
-        border-bottom: var(--grid-line);
-        min-height: auto;
-      }
-      .stat-headline { font-size: 2rem; }
-      
-      .chaos-footer {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-      }
-      .footer-label, .footer-status {
-        border: none;
-        border-bottom: var(--grid-line);
-        padding: 1rem;
-        justify-content: flex-start;
-      }
-      .footer-status { border-bottom: none; border-top: var(--grid-line); }
-    }
-  </style>
-  
-  <script>
-    function initProblemObserver() {
-      const section = document.getElementById('problem-trigger');
-      
-      if (!section) return;
-  
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            section.classList.add('visible');
-            observer.unobserve(section);
-          }
-        });
-      }, {
-        threshold: 0.2
+    if (!section) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add class 'visible' to the parent section, which triggers Tailwind group modifiers
+          section.classList.add('visible');
+          observer.unobserve(section);
+        }
       });
-  
-      observer.observe(section);
-    }
-  
-    initProblemObserver();
-    document.addEventListener('astro:page-load', initProblemObserver);
-  </script>
+    }, {
+      threshold: 0.2
+    });
+
+    observer.observe(section);
+  }
+
+  // Support both initial load and Astro View Transitions
+  initProblemObserver();
+  document.addEventListener('astro:page-load', initProblemObserver);
+</script>
