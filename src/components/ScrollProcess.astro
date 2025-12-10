@@ -300,11 +300,12 @@
       const icons = Array.from(track.querySelectorAll('.icon-group'));
   
       function updateScroll() {
+        if (!track) return;
         const rect = track.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
-        
-        const distanceScrolled = -rect.top;
-        const maxScroll = rect.height - viewportHeight;
+
+        const distanceScrolled = Math.max(0, -rect.top); // Clamp to 0 (no negative progress)
+        const maxScroll = Math.max(1, rect.height - viewportHeight); // Avoid division by zero or negative
         let progress = distanceScrolled / maxScroll;
         progress = Math.max(0, Math.min(progress, 1));
         
