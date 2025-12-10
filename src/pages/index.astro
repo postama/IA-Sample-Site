@@ -1,18 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout>
 	<main class="landing">
-		<!-- Hero Section -->
-		<section class="hero-section">
-			<div class="container">
-				<div class="hero-content">
-					<h1 class="company-name">Industrial Arts</h1>
-					<p class="tagline">The system of action for supply chains</p>
-				</div>
-			</div>
-		</section>
+		<Hero />
 
 		<!-- Features Grid -->
 		<section class="features-section">
@@ -79,32 +72,6 @@ import Layout from '../layouts/Layout.astro';
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 0 24px;
-	}
-
-	/* Hero Section */
-	.hero-section {
-		border-bottom: 1px solid #111111;
-		padding: 80px 0;
-	}
-
-	.hero-content {
-		text-align: center;
-	}
-
-	.company-name {
-		font-size: 72px;
-		font-weight: 900;
-		letter-spacing: -0.02em;
-		margin: 0 0 16px 0;
-		line-height: 1;
-		font-family: 'Aeonik', sans-serif;
-	}
-
-	.tagline {
-		font-size: 24px;
-		font-weight: 500;
-		letter-spacing: -0.01em;
-		margin: 0;
 	}
 
 	/* Features Section */
@@ -185,14 +152,6 @@ import Layout from '../layouts/Layout.astro';
 
 	/* Responsive Design */
 	@media screen and (max-width: 768px) {
-		.company-name {
-			font-size: 48px;
-		}
-
-		.tagline {
-			font-size: 18px;
-		}
-
 		.grid-section {
 			grid-template-columns: 1fr;
 		}
@@ -207,7 +166,6 @@ import Layout from '../layouts/Layout.astro';
 			border-bottom: none;
 		}
 
-		.hero-section,
 		.features-section,
 		.cta-section {
 			padding: 48px 0;
